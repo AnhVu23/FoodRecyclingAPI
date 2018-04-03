@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
+const bcrypt = require('bcryptjs');
 const UserSchema = new mongoose.Schema({
     email: {
         type: String,
@@ -46,5 +47,51 @@ UserSchema.methods.generateAuthToken = function () {
         return token;
     });
 };
+
+UserSchema.statics.findByToken = function (token) {
+    const User = this;
+    let decoded;
+
+    try {
+        decoded = jwt.verify(token, 'imageCollector')
+    } catch (e) {
+        return Promise.reject();
+    }
+    return User.findOne({
+        '_id': decoded._id,
+        'tokens.token': token,
+        'tokens.access': 'auth'
+    })
+};
+
+UserSchema.statics.findByCredential = function (email, password) {
+    const User = this;
+
+    return User.findOne({email}).then((user) => {
+      if(!user) {
+          return Promise.reject();
+      }
+      return new Promise((resolve, reject) => {
+          bcrypt.compare(password, user.password, (err, result) => {
+            if(!result) {
+                reject();
+            }
+            resolve(user);
+          });
+      });
+    });
+};
+UserSchema.pre('save', function (next) {
+    const user = this;
+    if(!user.isModified('password')) {
+        next();
+    }
+    bcrypt.genSalt(5, (err, salt) => {
+        bcrypt.hash(user.password, salt, (err, hash) => {
+            user.password = hash;
+            next();
+        });
+    });
+});
 const User = mongoose.model('User', UserSchema);
 module.exports = {User};
