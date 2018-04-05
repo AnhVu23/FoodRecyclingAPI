@@ -1,0 +1,12 @@
+{
+  "development": {
+    "PORT": 3000,
+    "MONGODB_URI": "mongodb://localhost:27017/ImageCollector",
+    "JWT_SECRET": "ImageCollector"
+  },
+  "test": {
+    "PORT": 3000,
+    "MONGODB_URI": "mongodb://localhost:27017/ImageCollectorTest",
+    "JWT_SECRET": "ImageCollectorTest"
+  }
+}

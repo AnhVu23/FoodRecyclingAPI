@@ -1,9 +1,11 @@
+require('./config/config');
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const _ = require('lodash');
 const { mongoose } = require('./config/mongoose');
 
-const {User} = require('./model/UserModel');
+const {User} = require('./api/model/userModel');
 const {authenticate} = require('./middleware/authenticate');
 
 const port = process.env.PORT || 3000;
@@ -11,24 +13,6 @@ const port = process.env.PORT || 3000;
 app = express();
 
 app.use(bodyParser.json());
-//Create a new user
-app.post('/users', (req, res) => {
-    const body = _.pick(req.body, ['email', 'password']);
-    const user = new User(body);
-    user.save().then(() => {
-        return user.generateAuthToken();
-    }).then((token) => {
-        res.header('x-auth', token).send(user);
-    }).catch((e) => {
-        res.status(400).send(e);
-    });
-});
-
-
-//GET current user
-app.get('/users/me', authenticate, (req, res) => {
-    res.send(req.user);
-});
 
 //Login
 app.post('/users/login', (req, res) => {
@@ -37,11 +21,22 @@ app.post('/users/login', (req, res) => {
         return user.generateAuthToken().then((token) => {
             res.header('x-auth', token).status(200).send(user);
         });
-    }).catch((e) => {
+    }).catch(() => {
         res.status(401).send();
     })
-
 });
+
+//Logout
+app.delete('/users/me/token', authenticate, (req, res) => {
+   req.user.removeToken(req.token).then(() => {
+       res.status(200).send();
+   }, () => {
+       res.status(400).send();
+   });
+});
+
 app.listen(port, () => {
     console.log(`Started up at port ${port}`);
 });
+
+module.exports = {app};
