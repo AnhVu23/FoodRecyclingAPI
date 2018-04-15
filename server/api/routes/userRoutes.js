@@ -1,35 +1,28 @@
 'use strict';
 const router = require('express').Router();
-const authenticate = require('../../middleware/authenticate');
+const authenticate = require('../../middleware/authenticateMiddleware').authenticate;
 const userController = require('../controllers/userController');
+
+
+router.param('id', userController.param);
 
 router.route('/')
     //Create new user
-    .post((req, res) => {
-        const body = _.pick(req.body, ['email', 'password']);
-        const user = new User(body);
-        user.save().then(() => {
-            return user.generateAuthToken();
-        }).then((token) => {
-            res.header('x-auth', token).send(user);
-        }).catch((e) => {
-            res.status(400).send(e);
-        });
-    });
+    .post(userController.signUp)
+    //Get a list of users
+    .get(authenticate, userController.getAll);
 
 //Get current user
 router.route('/me')
-    .get(authenticate, (req, res) => {
-        res.send(req.user);
-    });
+    .get(authenticate, userController.getMe)
+    .put(authenticate, userController.updateMe);
+
+//Get specific user with given ID
+router.route('/:id')
+    .get(userController.getUser);
 
 //Log out
 router.route('/logout')
-    .delete(authenticate, (req, res) => {
-        req.user.removeToken(req.token).then(() => {
-            res.status(200).send();
-        }, () => {
-            res.status(400).send();
-        });
-    });
+    .delete(authenticate, userController.logout);
 
+module.exports = {router};
