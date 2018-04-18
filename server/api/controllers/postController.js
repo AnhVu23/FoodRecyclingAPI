@@ -1,6 +1,6 @@
 const Post = require('../model/postModel');
 const _ =  require('lodash');
-
+const mongoose = require('mongoose');
 exports.param = (req, res, next, id) => {
   Post.findById(id)
       .populate('uploader', '_id email')
@@ -68,10 +68,18 @@ exports.deletePost = (req, res) => {
 };
 
 exports.uploadPost = (req, res) => {
-  const post = req.post;
+  const body= _.pick(req.body, ['description', 'imgPath', 'category']);
+  const post = new Post({
+     _id: mongoose.Types.ObjectId(),
+      description: body.description,
+      imgPath: body.imgPath,
+      category: body.category
+  });
   post.uploader = req.user._id;
-  Post.create(post).then((item) => {
-      return res.status(200).send(item);
+  console.log(req.user._id);
+  console.log(post);
+  post.save().then(() => {
+      return res.status(200).send(post);
   }, err => res.status(404).send({
       message: err
   }))

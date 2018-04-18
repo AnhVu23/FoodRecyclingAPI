@@ -15,7 +15,7 @@ router.route('/:id')
     .put(authenticate, postController.updatePost)
     .delete(authenticate, postController.deletePost);
 
-router.route('/:categoryName')
+router.route('/category/:categoryName')
     .get(authenticate, postController.getCategoryPosts);
 module.exports = router;
 
