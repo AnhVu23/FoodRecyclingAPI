@@ -25,4 +25,4 @@ router.route('/:id')
 router.route('/logout')
     .delete(authenticate, userController.logout);
 
-module.exports = {router};
+module.exports = router;

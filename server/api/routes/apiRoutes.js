@@ -6,4 +6,4 @@ router.use('/users', require('./userRoutes'));
 router.use('/photos', require('./photoRoutes'));
 router.use('/posts', require('./postRoutes'));
 router.use('/auth', require('./authRoutes'));
-module.exports = {router};
+module.exports = router;

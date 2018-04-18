@@ -9,7 +9,6 @@ const api = require('./api/routes/apiRoutes');
 const port = process.env.PORT || 3000;
 
 app = express();
-
 require('./middleware/appMiddleware')(app);
 //Setup the routes
 app.use('/api', api);

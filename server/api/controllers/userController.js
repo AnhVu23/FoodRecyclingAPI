@@ -1,5 +1,6 @@
 const User = require('../model/userModel');
 const _ = require('lodash');
+const mongoose = require('mongoose');
 
 exports.param = (req, res, next, id) => {
     User.findById(id)
@@ -14,7 +15,11 @@ exports.param = (req, res, next, id) => {
 
 exports.signUp = (req, res) => {
     const body = _.pick(req.body, ['email', 'password']);
-    const user = new User(body);
+    const user = new User({
+        _id: mongoose.Types.ObjectId(),
+        email: body.email,
+        password: body.password
+    });
     user.save().then(() => {
         return user.generateAuthToken();
     }).then((token) => {

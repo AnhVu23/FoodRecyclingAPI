@@ -2,9 +2,11 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const jwt = require('jsonwebtoken');
 const _ = require('lodash');
+const Schema = mongoose.Schema;
 const bcrypt = require('bcryptjs');
 
-const UserSchema = new mongoose.Schema({
+const UserSchema = new Schema({
+    _id: Schema.Types.ObjectId,
     email: {
         type: String,
         required: true,
@@ -109,4 +111,4 @@ UserSchema.pre('save', function (next) {
 });
 
 const User = mongoose.model('User', UserSchema);
-module.exports = {User};
+module.exports = User;
