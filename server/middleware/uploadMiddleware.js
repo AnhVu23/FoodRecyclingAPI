@@ -3,7 +3,7 @@ const path = require('path');
 
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, 'uploads/photos')
+        cb(null, 'public/photos')
     },
     filename: function(req, file, cb) {
         cb(null, file.fieldname + '-' + Date.now() + '.' + getExtension(file))
@@ -20,10 +20,10 @@ const upload = multer({
         const filetypes = /jpeg|jpg|png/;
         let mimetype = filetypes.test(file.mimetype);
         let extname = filetypes.test(path.extname(file.originalname).toLowerCase());
-        if (mimetype && extname) {
-            return next(null, true);
+        if (!(mimetype && extname)) {
+            next(new Error('Unsupported Media Type'));
         }
-        next(new Error('Unsupported Media Type'));
+        return next(null, true);
     },
     storage: storage,
 });

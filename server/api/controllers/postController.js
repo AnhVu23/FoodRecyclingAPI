@@ -83,5 +83,6 @@ exports.getCategoryPosts = (req, res) => {
       return res.status(200).send(posts);
   }, err => {
       return res.status(404).send();
+
   })
 };
