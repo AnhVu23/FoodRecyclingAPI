@@ -13,7 +13,7 @@ exports.param = (req, res, next, id) => {
         }, err => res.status(404).send());
 };
 
-exports.signUp = (req, res) => {
+exports.signUp = async (req, res) => {
     const body = _.pick(req.body, ['email', 'password']);
     const user = new User({
         _id: mongoose.Types.ObjectId(),

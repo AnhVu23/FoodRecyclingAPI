@@ -1,4 +1,9 @@
 {
+  "production": {
+    "PORT": 47439,
+    "MONGODB_URI": "ds247439.mlab.com",
+    "JWT_SECRET": "ImageCollector"
+  }
   "development": {
     "PORT": 3000,
     "MONGODB_URI": "mongodb://localhost:27017/ImageCollector",
