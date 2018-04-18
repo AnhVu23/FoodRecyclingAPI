@@ -12,6 +12,7 @@ app = express();
 require('./middleware/appMiddleware')(app);
 //Setup the routes
 app.use('/api', api);
+app.use(express.static('public'));
 
 app.use(bodyParser.json());
 

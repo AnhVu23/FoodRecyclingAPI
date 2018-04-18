@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57c1fdb4-d1b3-4015-9a7c-d2e395218c92" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/middleware/uploadMiddleware.js" afterPath="$PROJECT_DIR$/server/middleware/uploadMiddleware.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/server.js" afterPath="$PROJECT_DIR$/server/server.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,6 +16,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/server/server.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="postModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/api/model/postModel.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -36,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="uploadMiddleware.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="uploadMiddleware.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/middleware/uploadMiddleware.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -100,7 +110,6 @@
         <option value="$PROJECT_DIR$/server/api/routes/userRoutes.js" />
         <option value="$PROJECT_DIR$/server/middleware/appMiddleware.js" />
         <option value="$PROJECT_DIR$/server/api/model/userModel.js" />
-        <option value="$PROJECT_DIR$/server/server.js" />
         <option value="$PROJECT_DIR$/server/middleware/authenticateMiddleware.js" />
         <option value="$PROJECT_DIR$/server/api/controllers/userController.js" />
         <option value="$PROJECT_DIR$/package.json" />
@@ -109,6 +118,7 @@
         <option value="$PROJECT_DIR$/server/api/controllers/postController.js" />
         <option value="$PROJECT_DIR$/server/api/controllers/photoController.js" />
         <option value="$PROJECT_DIR$/server/middleware/uploadMiddleware.js" />
+        <option value="$PROJECT_DIR$/server/server.js" />
       </list>
     </option>
   </component>
@@ -133,9 +143,9 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="483" />
-    <option name="y" value="143" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="366" />
+    <option name="y" value="579" />
     <option name="width" value="1184" />
     <option name="height" value="763" />
   </component>
@@ -286,15 +296,15 @@
       <workItem from="1523546009083" duration="599000" />
       <workItem from="1523608538061" duration="1842000" />
       <workItem from="1523688168725" duration="29456000" />
-      <workItem from="1524040447324" duration="11958000" />
+      <workItem from="1524040447324" duration="12148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80882000" />
+    <option name="totallyTimeSpent" value="81072000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="483" y="143" width="1184" height="763" extended-state="0" />
+    <frame x="366" y="579" width="1184" height="763" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19434932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -651,14 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/api/model/postModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -700,6 +702,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
