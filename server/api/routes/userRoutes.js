@@ -19,7 +19,7 @@ router.route('/me')
 
 //Get specific user with given ID
 router.route('/:id')
-    .get(userController.getUser);
+    .get(authenticate, userController.getUser);
 
 //Log out
 router.route('/logout')

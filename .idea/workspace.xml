@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57c1fdb4-d1b3-4015-9a7c-d2e395218c92" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/controllers/authController.js" afterPath="$PROJECT_DIR$/server/api/controllers/authController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/controllers/postController.js" afterPath="$PROJECT_DIR$/server/api/controllers/postController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/controllers/userController.js" afterPath="$PROJECT_DIR$/server/api/controllers/userController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/model/postModel.js" afterPath="$PROJECT_DIR$/server/api/model/postModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/model/userModel.js" afterPath="$PROJECT_DIR$/server/api/model/userModel.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/routes/postRoutes.js" afterPath="$PROJECT_DIR$/server/api/routes/postRoutes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/routes/userRoutes.js" afterPath="$PROJECT_DIR$/server/api/routes/userRoutes.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,21 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/server.js">
+      <file leaf-file-name="postModel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/api/model/postModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="34" lean-forward="false" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+            <state relative-caret-position="425">
+              <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postModel.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/server/api/model/postModel.js">
+      <file leaf-file-name="postController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/api/controllers/postController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            <state relative-caret-position="483">
+              <caret line="94" column="44" lean-forward="false" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -51,41 +48,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/api/controllers/postController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="663">
-              <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/server/api/controllers/userController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="authenticateMiddleware.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/middleware/authenticateMiddleware.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+            <state relative-caret-position="170">
+              <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postRoutes.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="userRoutes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/server/api/routes/userRoutes.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postRoutes.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/api/routes/postRoutes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -119,21 +106,21 @@
         <option value="$PROJECT_DIR$/server/api/routes/apiRoutes.js" />
         <option value="$PROJECT_DIR$/server/api/routes/authRoutes.js" />
         <option value="$PROJECT_DIR$/server/api/routes/photoRoutes.js" />
-        <option value="$PROJECT_DIR$/server/api/routes/userRoutes.js" />
         <option value="$PROJECT_DIR$/server/middleware/appMiddleware.js" />
-        <option value="$PROJECT_DIR$/server/middleware/authenticateMiddleware.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/config/config.json" />
         <option value="$PROJECT_DIR$/server/config/config.js" />
         <option value="$PROJECT_DIR$/server/api/controllers/photoController.js" />
         <option value="$PROJECT_DIR$/server/middleware/uploadMiddleware.js" />
         <option value="$PROJECT_DIR$/server/server.js" />
-        <option value="$PROJECT_DIR$/server/api/routes/postRoutes.js" />
         <option value="$PROJECT_DIR$/server/api/controllers/authController.js" />
         <option value="$PROJECT_DIR$/server/api/controllers/userController.js" />
         <option value="$PROJECT_DIR$/server/api/model/userModel.js" />
-        <option value="$PROJECT_DIR$/server/api/controllers/postController.js" />
         <option value="$PROJECT_DIR$/server/api/model/postModel.js" />
+        <option value="$PROJECT_DIR$/server/api/routes/userRoutes.js" />
+        <option value="$PROJECT_DIR$/server/api/routes/postRoutes.js" />
+        <option value="$PROJECT_DIR$/server/middleware/authenticateMiddleware.js" />
+        <option value="$PROJECT_DIR$/server/api/controllers/postController.js" />
       </list>
     </option>
   </component>
@@ -158,9 +145,9 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="313" />
-    <option name="y" value="178" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="422" />
+    <option name="y" value="156" />
     <option name="width" value="1184" />
     <option name="height" value="763" />
   </component>
@@ -311,15 +298,15 @@
       <workItem from="1523546009083" duration="599000" />
       <workItem from="1523608538061" duration="1842000" />
       <workItem from="1523688168725" duration="29456000" />
-      <workItem from="1524040447324" duration="14388000" />
+      <workItem from="1524040447324" duration="17467000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83312000" />
+    <option name="totallyTimeSpent" value="86391000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="313" y="178" width="1184" height="763" extended-state="0" />
+    <frame x="422" y="156" width="1184" height="763" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19434932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -622,14 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/routes/userRoutes.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/config/mongoose.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -683,34 +662,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/routes/postRoutes.js">
+    <entry file="file://$PROJECT_DIR$/server/api/model/postModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/server/middleware/authenticateMiddleware.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+        <state relative-caret-position="425">
+          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/server/api/controllers/userController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="39" />
+        <state relative-caret-position="697">
+          <caret line="41" column="24" lean-forward="true" selection-start-line="41" selection-start-column="2" selection-end-line="46" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/controllers/postController.js">
+    <entry file="file://$PROJECT_DIR$/server/middleware/authenticateMiddleware.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+        <state relative-caret-position="170">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/routes/userRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="18" lean-forward="false" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -723,10 +702,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/api/model/postModel.js">
+    <entry file="file://$PROJECT_DIR$/server/api/controllers/postController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="21" lean-forward="true" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+        <state relative-caret-position="483">
+          <caret line="94" column="44" lean-forward="false" selection-start-line="94" selection-start-column="44" selection-end-line="94" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server/api/routes/postRoutes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding />
         </state>
       </provider>

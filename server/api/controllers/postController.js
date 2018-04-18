@@ -80,17 +80,17 @@ exports.uploadPost = (req, res) => {
   console.log(post);
   post.save().then(() => {
       return res.status(200).send(post);
-  }, err => res.status(404).send({
-      message: err
-  }))
+  }).catch(e => res.status(400).send(e));
 };
 
 exports.getCategoryPosts = (req, res) => {
-  const category = req.params.category;
-  Post.find({category: category}).then((posts) => {
-      return res.status(200).send(posts);
-  }, err => {
-      return res.status(404).send();
-
-  })
+    Post.find()
+        .populate('uploader', '_id email')
+        .exec()
+        .then((posts) => {
+            if(!posts) {
+                return res.status(404).send();
+            }
+            return res.status(400).send(posts);
+        }, (err) => res.status(404).send());
 };
