@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57c1fdb4-d1b3-4015-9a7c-d2e395218c92" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/api/controllers/photoController.js" afterPath="$PROJECT_DIR$/server/api/controllers/photoController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/middleware/uploadMiddleware.js" afterPath="$PROJECT_DIR$/server/middleware/uploadMiddleware.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/server/middleware/uploadMiddleware.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+              <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -287,12 +286,12 @@
       <workItem from="1523546009083" duration="599000" />
       <workItem from="1523608538061" duration="1842000" />
       <workItem from="1523688168725" duration="29456000" />
-      <workItem from="1524040447324" duration="11641000" />
+      <workItem from="1524040447324" duration="11774000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80565000" />
+    <option name="totallyTimeSpent" value="80698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="483" y="143" width="1184" height="763" extended-state="0" />
@@ -700,7 +699,7 @@
     <entry file="file://$PROJECT_DIR$/server/middleware/uploadMiddleware.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding />
         </state>
       </provider>
