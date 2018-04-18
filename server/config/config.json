@@ -1,7 +1,5 @@
 {
   "production": {
-    "PORT": 47439,
-    "MONGODB_URI": "ds247439.mlab.com",
     "JWT_SECRET": "ImageCollector"
   },
   "development": {
