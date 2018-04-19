@@ -10,7 +10,7 @@ router.route('/')
 router.route('/me')
     .get(authenticate, postController.getMyPosts);
 
-router.route('/filter')
+router.route('/category')
     .get(authenticate, postController.getCategory);
 
 router.route('/:id')
