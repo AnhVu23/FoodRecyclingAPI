@@ -34,8 +34,8 @@ exports.getMyPosts = (req, res) => {
 };
 
 exports.getOnePost = (req, res) => {
-    const item = req.item;
-    return res.status(200).send(item);
+    const post = req.post;
+    return res.status(200).send(post);
 };
 
 exports.updatePost = (req, res) => {
@@ -83,14 +83,12 @@ exports.uploadPost = (req, res) => {
   }).catch(e => res.status(400).send(e));
 };
 
-exports.getCategoryPosts = (req, res) => {
-    Post.find()
-        .populate('uploader', '_id email')
-        .exec()
-        .then((posts) => {
-            if(!posts) {
-                return res.status(404).send();
-            }
-            return res.status(400).send(posts);
-        }, (err) => res.status(404).send());
+exports.getCategory = (req, res) => {
+  const category = req.query.category;
+    Post.find({category: category}).then((posts) => {
+        if(!posts) {
+            return res.status(404).send();
+        }
+        return res.status(200).send(posts)
+    }, err => res.status(404).send())
 };
