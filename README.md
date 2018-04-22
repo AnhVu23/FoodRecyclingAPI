@@ -22,6 +22,7 @@
   * [GET /api/posts/:id](#get-posts-id)
   * [PUT /api/posts/:id](#put-posts-id)
   * [DELETE /api/posts/:id](#delete-posts-id)
+  * [GET /api/posts/users/:uid](#get-posts-uid)
 * [Photos](#photos)
   * [POST /api/photos/upload](#post-photos)
   
@@ -293,8 +294,7 @@ Header payload:
 | --- | --- | --- |
 | x-auth | string | Server Token  |
 
-Response payload data
-
+Response payload:
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -302,6 +302,8 @@ Response payload data
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| fridge | fridge |  |
+| uploadedTime | Date |  |
 
 **uploader** in detail
 
@@ -310,18 +312,42 @@ Response payload data
 | _id | string | |
 | email| string |  |
 
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
 Sample response data:
 
 ```json
 [
     {
-        "_id": "5ad7a91fc5fe9432d0fa6fbc",
-        "description": "fd",
-        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524080526725.jpg",
-        "category": "vegetables",
+        "uploadedTime": "2018-04-22T20:21:20.918Z",
+        "status": "available",
+        "_id": "5adcef8c00b3a5293403d2b6",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
         "uploader": {
-            "_id": "5ad712a46077f92dfcbe2953",
-            "email": "bitchy12@gmail.com"
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
+        },
+        "__v": 0
+    },
+    {
+        "uploadedTime": "2018-04-22T20:40:42.674Z",
+        "status": "available",
+        "_id": "5adcf365eb37eb177c6f85ca",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
+        "uploader": {
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
         },
         "__v": 0
     }
@@ -345,10 +371,7 @@ Request body:
 | category | string | Valid values: **vegetables**, **meat**, **drink**|
 | imgPath | string | |
 
-Response payload data
-
-| key |	type | description |
-| --- | --- | --- |
+Response payload:
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -356,6 +379,8 @@ Response payload data
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| fridge | fridge |  |
+| uploadedTime | Date |  |
 
 **uploader** in detail
 
@@ -364,23 +389,32 @@ Response payload data
 | _id | string | |
 | email| string |  |
 
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
 Sample response data:
 
 ```json
 [
     {
-        "_id": "5ad7a91fc5fe9432d0fa6fbc",
-        "description": "fd",
-        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524080526725.jpg",
-        "category": "vegetables",
+        "uploadedTime": "2018-04-22T20:21:20.918Z",
+        "status": "available",
+        "_id": "5adcef8c00b3a5293403d2b6",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
         "uploader": {
-            "_id": "5ad712a46077f92dfcbe2953",
-            "email": "bitchy12@gmail.com"
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
         },
         "__v": 0
     }
 ]
-
 ```
 
 ### <a name="get-posts-filter"></a> GET /api/posts/category
@@ -398,10 +432,7 @@ Request params:
 | --- | --- | --- |
 | category | string | Valid values: **vegetables**, **meat**, **drink**|
 
-Response payload data
-
-| key |	type | description |
-| --- | --- | --- |
+Response payload:
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -409,6 +440,8 @@ Response payload data
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| fridge | fridge |  |
+| uploadedTime | Date |  |
 
 **uploader** in detail
 
@@ -417,18 +450,42 @@ Response payload data
 | _id | string | |
 | email| string |  |
 
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
 Sample response data:
 
 ```json
 [
     {
-        "_id": "5ad7a91fc5fe9432d0fa6fbc",
-        "description": "fd",
-        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524080526725.jpg",
-        "category": "vegetables",
+        "uploadedTime": "2018-04-22T20:21:20.918Z",
+        "status": "available",
+        "_id": "5adcef8c00b3a5293403d2b6",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
         "uploader": {
-            "_id": "5ad712a46077f92dfcbe2953",
-            "email": "bitchy12@gmail.com"
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
+        },
+        "__v": 0
+    },
+    {
+        "uploadedTime": "2018-04-22T20:40:42.674Z",
+        "status": "available",
+        "_id": "5adcf365eb37eb177c6f85ca",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
+        "uploader": {
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
         },
         "__v": 0
     }
@@ -446,12 +503,15 @@ Header payload:
 | x-auth | string | Server Token  |
 
 Response payload:
-| --- | --- |
+| key |	type | description |
+| --- | --- | --- |
 | _id | string |  |
 | description | string |  |
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| fridge | fridge |  |
+| uploadedTime | Date |  |
 
 **uploader** in detail
 
@@ -472,13 +532,30 @@ Sample response data:
 ```json
 [
     {
-        "_id": "5ad7a91fc5fe9432d0fa6fbc",
-        "description": "fd",
-        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524080526725.jpg",
-        "category": "vegetables",
+        "uploadedTime": "2018-04-22T20:21:20.918Z",
+        "status": "available",
+        "_id": "5adcef8c00b3a5293403d2b6",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
         "uploader": {
-            "_id": "5ad712a46077f92dfcbe2953",
-            "email": "bitchy12@gmail.com"
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
+        },
+        "__v": 0
+    },
+    {
+        "uploadedTime": "2018-04-22T20:40:42.674Z",
+        "status": "available",
+        "_id": "5adcf365eb37eb177c6f85ca",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
+        "uploader": {
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
         },
         "__v": 0
     }
@@ -494,12 +571,15 @@ Header payload:
 | x-auth | string | Server Token  |
 
 Response payload:
-| --- | --- |
+| key |	type | description |
+| --- | --- | --- |
 | _id | string |  |
 | description | string |  |
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| fridge | fridge |  |
+| uploadedTime | Date |  |
 
 **uploader** in detail
 
@@ -520,13 +600,16 @@ Sample response data:
 ```json
 [
     {
-        "_id": "5ad7a91fc5fe9432d0fa6fbc",
-        "description": "fd",
-        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524080526725.jpg",
-        "category": "vegetables",
+        "uploadedTime": "2018-04-22T20:21:20.918Z",
+        "status": "available",
+        "_id": "5adcef8c00b3a5293403d2b6",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
         "uploader": {
-            "_id": "5ad712a46077f92dfcbe2953",
-            "email": "bitchy12@gmail.com"
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
         },
         "__v": 0
     }
@@ -551,12 +634,15 @@ Request body:
 | imgPath | string | optional |
 
 Response payload:
-| --- | --- |
+| key |	type | description |
+| --- | --- | --- |
 | _id | string |  |
 | description | string |  |
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| fridge | fridge |  |
+| uploadedTime | Date |  |
 
 **uploader** in detail
 
@@ -572,30 +658,21 @@ Sample header:
 }
 ```
 
-
-
-Sample request:
-
-```json
-{
-  "description": "nice",
-  "category": "meat",
-  "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524080526725.jpg",
-}
-```
-
 Sample response data:
 
 ```json
 [
     {
-        "_id": "5ad7a91fc5fe9432d0fa6fbc",
-        "description": "fd",
-        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524080526725.jpg",
-        "category": "vegetables",
+        "uploadedTime": "2018-04-22T20:21:20.918Z",
+        "status": "available",
+        "_id": "5adcef8c00b3a5293403d2b6",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
         "uploader": {
-            "_id": "5ad712a46077f92dfcbe2953",
-            "email": "bitchy12@gmail.com"
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
         },
         "__v": 0
     }
@@ -612,12 +689,66 @@ Header payload:
 | x-auth | string | Server Token  |
 
 Response payload:
-| --- | --- |
+| key |	type | description |
+| --- | --- | --- |
 | _id | string |  |
 | description | string |  |
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| fridge | fridge |  |
+| uploadedTime | Date |  |
+
+**uploader** in detail
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string | |
+| email| string |  |
+
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
+Sample response data:
+
+```json
+{
+        "uploadedTime": "2018-04-22T20:21:20.918Z",
+        "status": "available",
+        "_id": "5adcef8c00b3a5293403d2b6",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
+        "uploader": {
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
+        },
+        "__v": 0
+}
+```
+### <a name="get-posts-uid"></a> GET /api/posts/users/:uid
+Get posts of 1 users
+Header payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| x-auth | string | Server Token  |
+
+Response payload:
+| key |	type | description |
+| --- | --- | --- |
+| _id | string |  |
+| description | string |  |
+| imgPath | string |  |
+| category | string |  |
+| uploader | user |  |
+| fridge | fridge |  |
+| uploadedTime | Date |  |
 
 **uploader** in detail
 
@@ -638,13 +769,30 @@ Sample response data:
 ```json
 [
     {
-        "_id": "5ad7a91fc5fe9432d0fa6fbc",
-        "description": "fd",
-        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524080526725.jpg",
-        "category": "vegetables",
+        "uploadedTime": "2018-04-22T20:21:20.918Z",
+        "status": "available",
+        "_id": "5adcef8c00b3a5293403d2b6",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
         "uploader": {
-            "_id": "5ad712a46077f92dfcbe2953",
-            "email": "bitchy12@gmail.com"
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
+        },
+        "__v": 0
+    },
+    {
+        "uploadedTime": "2018-04-22T20:40:42.674Z",
+        "status": "available",
+        "_id": "5adcf365eb37eb177c6f85ca",
+        "fridge": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+        "category": "meat",
+        "uploader": {
+            "_id": "5adcecf177010504b0601c3f",
+            "email": "test@gmail.com"
         },
         "__v": 0
     }
