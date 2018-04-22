@@ -83,6 +83,9 @@ exports.uploadPost = (req, res) => {
           res.status(400).send({message: 'Invalid fridge'})
       }
      _.merge(fridge, {posts: post});
+      fridge.save().then(() => {
+          return res.status(200).send(post);
+      }).catch(e => res.status(400).send(e));
   }, err => res.status(400).send({message: err}));
   post.save().then(() => {
       return res.status(200).send(post);
