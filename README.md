@@ -303,6 +303,7 @@ Header payload:
 | x-auth | string | Server Token  |
 
 Response payload:
+
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -380,6 +381,7 @@ Request body:
 | imgPath | string | |
 
 Response payload:
+
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -441,6 +443,7 @@ Request params:
 | category | string | Valid values: **vegetables**, **meat**, **drink**|
 
 Response payload:
+
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -511,6 +514,7 @@ Header payload:
 | x-auth | string | Server Token  |
 
 Response payload:
+
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -579,6 +583,7 @@ Header payload:
 | x-auth | string | Server Token  |
 
 Response payload:
+
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -642,6 +647,7 @@ Request body:
 | imgPath | string | optional |
 
 Response payload:
+
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -697,6 +703,7 @@ Header payload:
 | x-auth | string | Server Token  |
 
 Response payload:
+
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -748,6 +755,7 @@ Header payload:
 | x-auth | string | Server Token  |
 
 Response payload:
+
 | key |	type | description |
 | --- | --- | --- |
 | _id | string |  |
@@ -803,6 +811,450 @@ Sample response data:
             "email": "test@gmail.com"
         },
         "__v": 0
+    }
+]
+```
+## <a name="fridges"></a> Fridges
+### <a name="get-fridges"></a> Get /api/fridges
+Get all fridges
+Header payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| x-auth | string | Server Token  |
+
+Response payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string |  |
+| description | string |  |
+| pickUpTime | Date |  |
+| name | string |  |
+| uploader | user |  |
+| posts | posts |  |
+
+**uploader** in detail
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string | |
+| email| string |  |
+
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
+Sample response data:
+
+```json
+[
+    {
+        "posts": [
+            {
+                "uploadedTime": "2018-04-22T20:49:20.538Z",
+                "status": "available",
+                "_id": "5adcf556410caa28b8875fdf",
+                "fridge": "5adcee1db73b6029fc9d4295",
+                "description": "testing",
+                "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+                "category": "meat",
+                "uploader": "5adcecf177010504b0601c3f",
+                "__v": 0
+            }
+        ],
+        "pickUpTime": "2018-04-22T20:18:33.117Z",
+        "_id": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "name": "fridge test",
+        "__v": 1
+    }
+]
+```
+
+### <a name="upload-fridges"></a> POST /api/fridges
+Upload a new fridge 
+
+Header payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| x-auth | string | Server Token  |
+
+Request body:
+
+| key |	type | description |
+| --- | --- | --- |
+| description | string |  |
+| name | string | |
+| pickUpTime | date | |
+
+Response payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string |  |
+| description | string |  |
+| pickUpTime | Date |  |
+| name | string |  |
+| uploader | user |  |
+| posts | posts |  |
+
+**uploader** in detail
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string | |
+| email| string |  |
+
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
+Sample response data:
+
+```json
+[
+    {
+        "posts": [
+            {
+                "uploadedTime": "2018-04-22T20:49:20.538Z",
+                "status": "available",
+                "_id": "5adcf556410caa28b8875fdf",
+                "fridge": "5adcee1db73b6029fc9d4295",
+                "description": "testing",
+                "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+                "category": "meat",
+                "uploader": "5adcecf177010504b0601c3f",
+                "__v": 0
+            }
+        ],
+        "pickUpTime": "2018-04-22T20:18:33.117Z",
+        "_id": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "name": "fridge test",
+        "__v": 1
+    }
+]
+```
+
+### <a name="get-fridges-me"></a> GET /api/fridges/me
+Get all my fridges
+
+Header payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| x-auth | string | Server Token  |
+
+Response payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string |  |
+| description | string |  |
+| pickUpTime | Date |  |
+| name | string |  |
+| uploader | user |  |
+| posts | posts |  |
+
+**uploader** in detail
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string | |
+| email| string |  |
+
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
+Sample response data:
+
+```json
+[
+    {
+        "posts": [
+            {
+                "uploadedTime": "2018-04-22T20:49:20.538Z",
+                "status": "available",
+                "_id": "5adcf556410caa28b8875fdf",
+                "fridge": "5adcee1db73b6029fc9d4295",
+                "description": "testing",
+                "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+                "category": "meat",
+                "uploader": "5adcecf177010504b0601c3f",
+                "__v": 0
+            }
+        ],
+        "pickUpTime": "2018-04-22T20:18:33.117Z",
+        "_id": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "name": "fridge test",
+        "__v": 1
+    }
+]
+```
+
+### <a name="get-fridges-id"></a> GET /api/fridges/:id
+Get one fridge based on id
+Header payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| x-auth | string | Server Token  |
+
+Response payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string |  |
+| description | string |  |
+| pickUpTime | Date |  |
+| name | string |  |
+| uploader | user |  |
+| posts | posts |  |
+
+**uploader** in detail
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string | |
+| email| string |  |
+
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
+Sample response data:
+
+```json
+[
+    {
+        "posts": [
+            {
+                "uploadedTime": "2018-04-22T20:49:20.538Z",
+                "status": "available",
+                "_id": "5adcf556410caa28b8875fdf",
+                "fridge": "5adcee1db73b6029fc9d4295",
+                "description": "testing",
+                "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+                "category": "meat",
+                "uploader": "5adcecf177010504b0601c3f",
+                "__v": 0
+            }
+        ],
+        "pickUpTime": "2018-04-22T20:18:33.117Z",
+        "_id": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "name": "fridge test",
+        "__v": 1
+    }
+]
+```
+
+### <a name="put-fridges-id"></a> PUT /api/fridges/:id
+Edit post based on id
+
+Header payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| x-auth | string | Server Token  |
+
+Request body:
+
+| key |	type | description |
+| --- | --- | --- |
+| description | string | optional |
+| name | string | optional |
+| pickUpTime | date | optional |
+
+Response payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string |  |
+| description | string |  |
+| pickUpTime | Date |  |
+| name | string |  |
+| uploader | user |  |
+| posts | posts |  |
+
+**uploader** in detail
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string | |
+| email| string |  |
+
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
+Sample response data:
+
+```json
+[
+    {
+        "posts": [
+            {
+                "uploadedTime": "2018-04-22T20:49:20.538Z",
+                "status": "available",
+                "_id": "5adcf556410caa28b8875fdf",
+                "fridge": "5adcee1db73b6029fc9d4295",
+                "description": "testing",
+                "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+                "category": "meat",
+                "uploader": "5adcecf177010504b0601c3f",
+                "__v": 0
+            }
+        ],
+        "pickUpTime": "2018-04-22T20:18:33.117Z",
+        "_id": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "name": "fridge test",
+        "__v": 1
+    }
+]
+```
+
+### <a name="delete-fridges-id"></a> DELETE /api/fridges/:id
+Delete post based on id
+
+Header payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| x-auth | string | Server Token  |
+
+Response payload:
+
+Response payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string |  |
+| description | string |  |
+| pickUpTime | Date |  |
+| name | string |  |
+| uploader | user |  |
+| posts | posts |  |
+
+**uploader** in detail
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string | |
+| email| string |  |
+
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
+Sample response data:
+
+```json
+[
+    {
+        "posts": [
+            {
+                "uploadedTime": "2018-04-22T20:49:20.538Z",
+                "status": "available",
+                "_id": "5adcf556410caa28b8875fdf",
+                "fridge": "5adcee1db73b6029fc9d4295",
+                "description": "testing",
+                "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+                "category": "meat",
+                "uploader": "5adcecf177010504b0601c3f",
+                "__v": 0
+            }
+        ],
+        "pickUpTime": "2018-04-22T20:18:33.117Z",
+        "_id": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "name": "fridge test",
+        "__v": 1
+    }
+]
+```
+
+### <a name="get-fridges-uid"></a> GET /api/fridges/users/:uid
+Get posts of 1 users
+Header payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| x-auth | string | Server Token  |
+
+Response payload:
+
+Response payload:
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string |  |
+| description | string |  |
+| pickUpTime | Date |  |
+| name | string |  |
+| uploader | user |  |
+| posts | posts |  |
+
+**uploader** in detail
+
+| key |	type | description |
+| --- | --- | --- |
+| _id | string | |
+| email| string |  |
+
+Sample header:
+```json
+{
+  "x-auth":"HERE IS THE TOKEN"
+}
+```
+
+Sample response data:
+
+```json
+[
+    {
+        "posts": [
+            {
+                "uploadedTime": "2018-04-22T20:49:20.538Z",
+                "status": "available",
+                "_id": "5adcf556410caa28b8875fdf",
+                "fridge": "5adcee1db73b6029fc9d4295",
+                "description": "testing",
+                "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
+                "category": "meat",
+                "uploader": "5adcecf177010504b0601c3f",
+                "__v": 0
+            }
+        ],
+        "pickUpTime": "2018-04-22T20:18:33.117Z",
+        "_id": "5adcee1db73b6029fc9d4295",
+        "description": "testing",
+        "name": "fridge test",
+        "__v": 1
     }
 ]
 ```
