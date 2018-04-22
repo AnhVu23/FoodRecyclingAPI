@@ -18,6 +18,8 @@ router.route('/:id')
     .put(authenticate, postController.updatePost)
     .delete(authenticate, postController.deletePost);
 
+router.route('/users/:uid')
+    .get(authenticate, postController.getUserPosts);
 
 module.exports = router;
 

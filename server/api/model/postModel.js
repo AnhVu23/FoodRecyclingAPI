@@ -19,6 +19,21 @@ const PostSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User',
         required: true
+    },
+    fridge: {
+        type: Schema.Types.ObjectId,
+        ref: 'Fridge',
+        required: true
+    },
+    uploadedTime: {
+        type: Date,
+        required: true,
+        default: Date.now()
+    },
+    status: {
+        type: String,
+        required: true,
+        default: 'available'
     }
 });
 
