@@ -377,6 +377,7 @@ Request body:
 | key |	type | description |
 | --- | --- | --- |
 | description | string |  |
+| price | number |  |
 | category | string | Valid values: **vegetables**, **meat**, **drink**|
 | imgPath | string | |
 
