@@ -6,7 +6,7 @@
 * [Error request](#error)
 ### Official
 * [Authen](#auth)
-  * [POST/auth/signin](#signin)
+  * [POST/auth/login](#signin)
 * [Users](#users)
   * [POST /api/users](#post-users)
   * [GET /api/users](#get-users)
