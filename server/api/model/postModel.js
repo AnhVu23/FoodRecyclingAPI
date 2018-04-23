@@ -30,6 +30,10 @@ const PostSchema = new Schema({
         required: true,
         default: Date.now()
     },
+    price: {
+        type: Number,
+        required: true
+    },
     status: {
         type: String,
         required: true,
