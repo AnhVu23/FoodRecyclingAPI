@@ -388,6 +388,7 @@ Response payload:
 | _id | string |  |
 | description | string |  |
 | imgPath | string |  |
+| price | number |  |
 | category | string |  |
 | uploader | user |  |
 | fridge | fridge |  |
@@ -417,6 +418,7 @@ Sample response data:
         "_id": "5adcef8c00b3a5293403d2b6",
         "fridge": "5adcee1db73b6029fc9d4295",
         "description": "testing",
+        "price": 10,
         "imgPath": "https://food-recycling.herokuapp.com/photos/photo-1524428518337.jpg",
         "category": "meat",
         "uploader": {
@@ -452,6 +454,7 @@ Response payload:
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| price | number |  |
 | fridge | fridge |  |
 | uploadedTime | Date |  |
 
@@ -523,6 +526,7 @@ Response payload:
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| price | number |  |
 | fridge | fridge |  |
 | uploadedTime | Date |  |
 
@@ -592,6 +596,7 @@ Response payload:
 | imgPath | string |  |
 | category | string |  |
 | uploader | user |  |
+| price | number |  |
 | fridge | fridge |  |
 | uploadedTime | Date |  |
 
@@ -657,6 +662,7 @@ Response payload:
 | category | string |  |
 | uploader | user |  |
 | fridge | fridge |  |
+| price | number |  |
 | uploadedTime | Date |  |
 
 **uploader** in detail
@@ -713,6 +719,7 @@ Response payload:
 | category | string |  |
 | uploader | user |  |
 | fridge | fridge |  |
+| price | number |  |
 | uploadedTime | Date |  |
 
 **uploader** in detail
@@ -765,6 +772,7 @@ Response payload:
 | category | string |  |
 | uploader | user |  |
 | fridge | fridge |  |
+| price | number |  |
 | uploadedTime | Date |  |
 
 **uploader** in detail
