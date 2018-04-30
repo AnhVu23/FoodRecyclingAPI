@@ -5,6 +5,7 @@ const _ =  require('lodash');
 exports.param = (req,res,next,id) => {
     Fridge.findById(id)
         .populate('uploader', '_id email')
+        .populate('posts')
         .exec()
         .then((fridge) => {
             if(!fridge) {
