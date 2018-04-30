@@ -378,6 +378,7 @@ Request body:
 | --- | --- | --- |
 | description | string |  |
 | price | number |  |
+| fridge | string | fridge id  |
 | category | string | Valid values: **vegetables**, **meat**, **drink**|
 | imgPath | string | |
 
