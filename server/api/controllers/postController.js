@@ -8,11 +8,11 @@ exports.param = (req, res, next, id) => {
       .exec()
       .then((post) => {
         if(!post) {
-            return Promise.reject();
+            return res.status(400).send();
         }
         req.post = post;
         next();
-      }, (err) => Promise.reject());
+      }, (err) => res.status(400).send());
 };
 
 exports.getAll = (req, res) => {
@@ -69,10 +69,11 @@ exports.deletePost = (req, res) => {
 };
 
 exports.uploadPost = (req, res) => {
-  const body= _.pick(req.body, ['description', 'imgPath', 'category', 'fridge']);
+  const body= _.pick(req.body, ['description', 'imgPath', 'category', 'fridge', 'price']);
   const post = new Post({
      _id: mongoose.Types.ObjectId(),
       fridge: body.fridge,
+      price: body.price,
       description: body.description,
       imgPath: body.imgPath,
       category: body.category
@@ -82,9 +83,10 @@ exports.uploadPost = (req, res) => {
       if(!fridge) {
           res.status(400).send({message: 'Invalid fridge'})
       }
-     _.merge(fridge, {posts: post});
+      fridge.posts.push(post);
+     //_.merge(fridge, {posts: post});
       fridge.save().then(() => {
-          return res.status(200).send(post);
+          console.log('Save success');
       }).catch(e => res.status(400).send(e));
   }, err => res.status(400).send({message: err}));
   post.save().then(() => {

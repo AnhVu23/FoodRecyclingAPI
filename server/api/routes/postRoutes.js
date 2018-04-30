@@ -10,13 +10,13 @@ router.route('/')
 router.route('/me')
     .get(authenticate, postController.getMyPosts);
 
-router.route('/category')
-    .get(authenticate, postController.getCategory);
-
 router.route('/:id')
     .get(authenticate, postController.getOnePost)
     .put(authenticate, postController.updatePost)
     .delete(authenticate, postController.deletePost);
+
+router.route('/category')
+    .get(authenticate, postController.getCategory);
 
 router.route('/users/:uid')
     .get(authenticate, postController.getUserPosts);

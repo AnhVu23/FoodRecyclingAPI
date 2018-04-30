@@ -3,14 +3,15 @@ const _ = require('lodash');
 const mongoose = require('mongoose');
 
 exports.param = (req, res, next, id) => {
-    User.findById(id)
+    User.find({_id: id})
+        .select('_id email')
         .then((user) => {
             if(!user) {
                 return res.status(404).send();
             }
-            req.user = user;
+            req.userFind = user;
             next();
-        }, err => res.status(404).send());
+        }, err => res.status(400).send());
 };
 
 exports.signUp = async (req, res) => {
@@ -22,7 +23,7 @@ exports.signUp = async (req, res) => {
     });
     user.save().then(() => {
         return user.generateAuthToken();
-    }).then((token) => {
+    }).then(() => {
         res.status(200).send(user);
     }).catch((e) => {
         res.status(400).send(e);
@@ -34,12 +35,15 @@ exports.getMe = (req, res) => {
 };
 
 exports.getUser = (req, res) => {
-  const user = req.user;
+  const user = req.userFind;
+  console.log(user);
   return res.status(200).send(user);
 };
 
 exports.getAll = (req, res) => {
-  User.find({}).then((users) => {
+  User.find({})
+      .select('_id email')
+      .then((users) => {
       if(!users) {
           return res.status(404).send();
       }
