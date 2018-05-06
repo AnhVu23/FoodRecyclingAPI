@@ -12,7 +12,7 @@ const PostSchema = new Schema({
     },
     category: {
         type: String,
-        enum: ['vegetables', 'drink', 'meat'],
+        enum: ['Avocado', 'Banana', 'Cocos', 'Kiwi', 'Lemon', 'Limes', 'Mango', 'Orange', 'Pineapple', 'Strawberry'],
         required: true
     },
     uploader: {
