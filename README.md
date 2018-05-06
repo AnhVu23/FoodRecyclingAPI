@@ -379,7 +379,7 @@ Request body:
 | description | string |  |
 | price | number |  |
 | fridge | string | fridge id  |
-| category | string | Valid values: **vegetables**, **meat**, **drink**|
+| category | string | Valid values: 'Avocado', 'Banana', 'Cocos', 'Kiwi', 'Lemon', 'Limes', 'Mango', 'Orange', 'Pineapple', 'Strawberry'|
 | imgPath | string | |
 
 Response payload:
@@ -444,7 +444,7 @@ Request params:
 
 | key |	type | description |
 | --- | --- | --- |
-| category | string | Valid values: **vegetables**, **meat**, **drink**|
+| category | string | Valid values: 'Avocado', 'Banana', 'Cocos', 'Kiwi', 'Lemon', 'Limes', 'Mango', 'Orange', 'Pineapple', 'Strawberry'|
 
 Response payload:
 
